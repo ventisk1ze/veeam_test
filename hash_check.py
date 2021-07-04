@@ -1,7 +1,7 @@
 from hashlib import sha1, sha256, md5
 
 BLOCK_SIZE = 65536
-
+FOLDER = 'hash_data/'
 
 def hash(file, hash_type):
     if hash_type == "SHA1":
@@ -16,4 +16,3 @@ def hash(file, hash_type):
             hash_object.update(fb)
             fb = f.read(BLOCK_SIZE)
     return hash_object.hexdigest()
-
