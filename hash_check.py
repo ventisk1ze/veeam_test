@@ -1,7 +1,9 @@
 from hashlib import sha1, sha256, md5
+import sys
 
 BLOCK_SIZE = 65536
-FOLDER = 'hash_data/'
+INPUT_FILE_NAME = sys.argv[1]
+FOLDER = sys.argv[2]
 
 
 def hash(file, hash_type):
